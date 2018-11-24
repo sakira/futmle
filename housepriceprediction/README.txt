@@ -39,3 +39,21 @@ python manage.py startapp predict
 9. Run the server
 python manage.py runserver
 In browser, open localhost:8000/predict/
+
+
+
+
+-----------------------------------------------------------------------
+predict/views.py contains function for prediction app and training app.
+Open the browser and type for example:
+1. To train the model on the data stored in the server: 
+localhost:8000/train 
+2. To predict from the trained model:
+curl http://localhost:8000/predict/ -H application/json --data-binary '{
+  "crime_rate": 0.1,
+  "avg_number_of_rooms": 4.0,
+  "distance_to_employment_centers": 6.5,
+  "property_tax_rate": 330.0,
+  "pupil_teacher_ratio": 19.5
+}'
+-----------------------------------------------------------------------
