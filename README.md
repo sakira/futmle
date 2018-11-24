@@ -54,9 +54,9 @@ In browser, open localhost:8000/predict/
 
 
 -----------------------------------------------------------------------
-# How to use the App
+# How to use the App locally
 -----------------------------------------------------------------------
-predict/views.py contains function for prediction app and training app.
+predict/views.py contains functions for prediction app and training app.
 Open the browser and type for example:
 1. To train the model on the data stored in the server: 
 localhost:8000/train 
@@ -69,3 +69,18 @@ curl http://localhost:8000/predict/ -H application/json --data-binary '{
   "pupil_teacher_ratio": 19.5
 }'
 -----------------------------------------------------------------------
+
+------------------------------------------------------------------------
+# How to use the App remotely from another server
+------------------------------------------------------------------------
+
+1. Example request for training with the given data:
+curl http://sakira.pythonanywhere.com/predict/train
+2. Example request for prediction from a json object:
+   curl http://sakira.pythonanywhere.com/predict/ -H application/json --data-binary '{
+  "crime_rate": 0.9557700000000001,
+  "avg_number_of_rooms": 6.047,
+  "distance_to_employment_centers": 4.4534,
+  "property_tax_rate": 307.0,
+  "pupil_teacher_ratio": 21.0
+}'
