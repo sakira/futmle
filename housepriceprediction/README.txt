@@ -8,6 +8,14 @@ takes as input certain
 statistics of the district (defined below), and 
 
 outputs the estimated price of a dwelling.
+
+-------------------------------------------------
+Exploratory data analysis
+------------------------------------------------
+See housingpriceprediction/kernel.ipynb
+
+
+
 ---------------------------------------------------------------------
 Setup environment
 ---------------------------------------------------------------------
@@ -41,8 +49,8 @@ python manage.py runserver
 In browser, open localhost:8000/predict/
 
 
-
-
+-----------------------------------------------------------------------
+How to use the App
 -----------------------------------------------------------------------
 predict/views.py contains function for prediction app and training app.
 Open the browser and type for example:
